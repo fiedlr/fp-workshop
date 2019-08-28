@@ -1,5 +1,5 @@
 import React from 'react';
-import { main, renderGame, getGames } from './logic.js';
+import { main, renderGame, getNumberOfGames } from './logic.js';
 import './App.css';
 
 class App extends React.Component {
@@ -20,11 +20,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {renderGame(this.handleClick)}
+        {renderGame(this.state.tiles, this.handleClick)}
         <div className="Stats">
           <p>Player #1: {this.player1Score}</p>
           <p>Player #2: {this.player2Score}</p>
-          <p>Games total: {getGames(this.player1Score, this.player2Score)}</p>
+          <p>Games total: {getNumberOfGames(this.player1Score, this.player2Score)}</p>
         </div>
       </div>
     );
