@@ -22,9 +22,9 @@ class App extends React.Component {
       <div className="App">
         {renderGame(this.state.tiles, this.handleClick)}
         <div className="Stats">
-          <p>Player #1: {this.player1Score}</p>
-          <p>Player #2: {this.player2Score}</p>
-          <p>Games total: {getNumberOfGames(this.player1Score, this.player2Score)}</p>
+          <p>Player #1: {this.state.player1Score}</p>
+          <p>Player #2: {this.state.player2Score}</p>
+          <p>Games total: {getNumberOfGames(this.state.player1Score, this.state.player2Score)}</p>
         </div>
       </div>
     );
