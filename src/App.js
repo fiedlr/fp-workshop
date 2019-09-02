@@ -10,7 +10,7 @@ class App extends React.Component {
       player1Score: 0,
       player2Score: 0
     };
-    this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(tileId) {

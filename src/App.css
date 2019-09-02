@@ -7,20 +7,28 @@
   padding: 0;
   width: 180px;
   height: 180px;
-  box-sizing: border-box;
 }
 
 .Tile {
   display: inline-block;
   width: 60px;
   height: 60px;
-  border: solid 1px red;
+  margin: 0;
+  padding: 20px;
+  border: solid 1px black;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 18px;
 }
 
-.Tile.p1 {
-  background: gray;
+.Tile:hover {
+  background: silver;
 }
 
-.Tile.p2 {
-  background: black;
+.Tile.p1, .Tile.p2 {
+  cursor: default;
+}
+
+.Tile.p1:hover, .Tile.p2:hover {
+  background: white;
 }
