@@ -13,18 +13,18 @@ class App extends React.Component {
     this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState(main);
+  handleClick(tileId) {
+    return () => this.setState(main(tileId));
   }
 
   render() {
     return (
       <div className="App">
-        {renderGame(this.state.tiles, this.handleClick)}
+        {renderGame(this.state.tiles)(this.handleClick)}
         <div className="Stats">
           <p>Player #1: {this.state.player1Score}</p>
           <p>Player #2: {this.state.player2Score}</p>
-          <p>Games total: {getNumberOfGames(this.state.player1Score, this.state.player2Score)}</p>
+          <p>Games total: {getNumberOfGames(this.state.player1Score)(this.state.player2Score)}</p>
         </div>
       </div>
     );
